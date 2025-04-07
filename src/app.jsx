@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, NavLink, Route, Routes } from "react-router";
+import { Home } from "./home/home";
+import { Play } from "./play/play";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./app.css";
 
