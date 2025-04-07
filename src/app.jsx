@@ -7,16 +7,28 @@ function App() {
   return (
     <BrowserRouter>
       <div className="body bg-dark text-light">
-        <div className="container-fluid">
-          <div className="navbar fixed-top navbar-dark">
+        <header className="container-fluid">
+          <nav className="navbar fixed-top navbar-dark">
             <div className="navbar-brand">WordGames</div>
             <menu className="navbar-nav">
               <li className="nav-item">
-                <NavLink></NavLink>
+                <NavLink className="nav-link" to="">
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="play">
+                  Play
+                </NavLink>
               </li>
             </menu>
-          </div>
-        </div>
+          </nav>
+        </header>
+
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/play" element={<Play />}></Route>
+        </Routes>
       </div>
     </BrowserRouter>
   );
